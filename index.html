@@ -14,7 +14,6 @@
             filter: alpha(opacity = 80); /* 用于IE浏览器－透明度为20%*/
             -moz-opacity: 0.8; /*  用于Moz + Firefox－透明度为20%*/
             opacity: 0.8;
-            /*min-height: 640px;*/
             height: 80%;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
@@ -57,7 +56,7 @@
             <li class="next"><a href="#" style="width: 10%">Next</a></li>
         </ul>
     </div>
-    <div id="report_container" class="report container" style="margin-left: 4%; margin-right: 4%">
+    <div id="report_container" class="report container">
 
         <!--<iframe class="report frame" src="reports/20130320.html"/>-->
     </div>
@@ -66,9 +65,25 @@
 <!-- /container -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="enable_reports.js"></script>
 <script>
+    function isEnable(day){
+        return enable_reports.indexOf(day) != -1;
+    }
+    function loadReports(day){
+        if (isEnable(day)) {
+            $('#report_container').load('reports/' + day + '.html');
+        }
+    }
+
     $(document).ready(function(){
-        $('#report_container').load('reports/test.html');
+        Array.prototype.indexOf = function(e){
+            for(var i=0,j; j=this; i++){
+                if(j==e){return i;}
+            }
+            return -1;
+        }
+        loadReports(enable_reports[enable_reports.length - 1]);
     })
 </script>
 </body>
