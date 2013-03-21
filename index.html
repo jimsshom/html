@@ -5,11 +5,12 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="report.css" rel="stylesheet">
 
     <style type="text/css">
         .report {
             background-color: white;
-            background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), color-stop(0.8, #aaaaaa), to(rgba(200, 200, 200, 0.1)));
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), color-stop(0.8, #aaaaaa), to(rgba(200, 200, 200, 0.1)));
             filter: alpha(opacity = 80); /* 用于IE浏览器－透明度为20%*/
             -moz-opacity: 0.8; /*  用于Moz + Firefox－透明度为20%*/
             opacity: 0.8;
@@ -56,13 +57,19 @@
             <li class="next"><a href="#" style="width: 10%">Next</a></li>
         </ul>
     </div>
-    <div class="report container">
-        <iframe class="report frame" src="reports/20130320.html"/>
+    <div id="report_container" class="report container" style="margin-left: 4%; margin-right: 4%">
+
+        <!--<iframe class="report frame" src="reports/20130320.html"/>-->
     </div>
 
 </div>
 <!-- /container -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#report_container').load('reports/test.html');
+    })
+</script>
 </body>
 </html>

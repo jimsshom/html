@@ -1,0 +1,66 @@
+.sub_report {
+    outline-color: #999;
+    outline-style: dashed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*Minitroopers*/
+#minitroopers {
+    background-color: rgba(199, 212, 232, 0.95);
+    background-image: url('minitroopers.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 50%
+}
+
+.fight {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.b {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-height: 20px;
+    min-width: 70px;
+    border: 0px;
+    padding: 0px;
+    bottom: 0px;
+}
+
+.win {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: green;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#006400), to(green));
+    text-align: center;
+}
+
+.defeat {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: #8b0000;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#8b0000), to(red));
+    text-align: center;
+}
+
+.go {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: #ff8c00;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff8c00), to(orange));
+    text-align: center;
+}
+
+/*gn00.com*/
+#gn00 {
+    background-color: rgba(177, 222, 197, 0.57);
+}
+
+/*fund*/
+#fund {
+    background-color: rgba(222, 185, 188, 0.56);
+}
