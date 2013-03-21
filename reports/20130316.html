@@ -1,107 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>20130316 Report</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="minitroopers" class="sub_report">
+        <h2>Minitroopers</h2>
 
-    <style type="text/css">
-        .sub_report {
-            outline-color: #999;
-            outline-style: dashed;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-
-            /*Minitroopers*/
-        #minitroopers {
-            background-color: rgba(199, 212, 232, 0.95);
-            background-image: url('../minitroopers.png');
-            background-repeat: no-repeat;
-            background-position: right top;
-            background-size: 50%
-        }
-
-        .fight {
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-
-        .b {
-            margin-top: 0px;
-            margin-bottom: 0px;
-            margin-left: 2px;
-            margin-right: 2px;
-            min-height: 20px;
-            min-width: 70px;
-            border: 0px;
-            padding: 0px;
-            bottom: 0px;
-        }
-
-        .win {
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            background-color: green;
-            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#006400), to(green));
-            text-align: center;
-        }
-
-        .defeat {
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            background-color: #8b0000;
-            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#8b0000), to(red));
-            text-align: center;
-        }
-
-        .go {
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            background-color: #ff8c00;
-            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff8c00), to(orange));
-            text-align: center;
-        }
-
-        /*gn00.com*/
-        #gn00 {
-            background-color: rgba(177, 222, 197, 0.57);
-        }
-
-        /*fund*/
-        #fund {
-            background-color: rgba(222, 185, 188, 0.56);
-        }
-    </style>
-</head>
-<body style="margin-left: 4%; margin-right: 4%">
-<div id="minitroopers" class="sub_report">    
-    <h2>Minitroopers</h2>
-
-    <div class="money"><img style="max-height: 35px; padding-right: 10px" src="../euro_coin.png"/><span
-            style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">79</span></div>
-    <div class="fight">
-        <h3 class="b">Fight</h3>
-        <button class="b win">Win</button><button class="b win">Win</button><button class="b win">Win</button>
+        <div class="money"><img style="max-height: 35px; padding-right: 10px" src="euro_coin.png"/><span
+                style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">79</span></div>
+        <div class="fight">
+            <h3 class="b">Fight</h3>
+            <button class="b win">Win</button>
+            <button class="b win">Win</button>
+            <button class="b win">Win</button>
+        </div>
+        <div class="fight">
+            <h3 class="b">Mission</h3>
+            <button class="b defeat">Defeat</button>
+            <button class="b defeat">Defeat</button>
+            <button class="b defeat">Defeat</button>
+        </div>
+        <p style="min-height: 5px"></p>
     </div>
-    <div class="fight">
-        <h3 class="b">Mission</h3>
-        <button class="b defeat">Defeat</button><button class="b defeat">Defeat</button><button class="b defeat">Defeat</button>
-    </div>
-    <p style="min-height: 5px"></p>
-</div>
-<div id="gn00" class="sub_report">
-    <h2>技术宅社区</h2>
-    <p>checkin!</p>
-</div>
-<div id="fund" class="sub_report">
-    <h2>基金走势</h2>
-    <p>{'2013-03-06': {'sh519069': ('129.900', '126.400')}, '2013-03-12': {'sh519069': ('127.700', '128.000')}, '2013-03-13': {'sh519069': ('125.200', '127.700')}, '2013-03-15': {'sh519069': ('126.000', '124.400')}, '2013-03-11': {'sh519069': ('128.000', '129.200')}, '2013-03-08': {'sh519069': ('129.200', '131.100')}}</p>
-</div>
+    <div id="gn00" class="sub_report">
+        <h2>技术宅社区</h2>
 
-<!-- /container -->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+        <p>checkin!</p>
+    </div>
+    <div id="fund" class="sub_report">
+        <h2>基金走势</h2>
+
+        <p>{'2013-03-06': {'sh519069': ('129.900', '126.400')}, '2013-03-12': {'sh519069': ('127.700', '128.000')}, '2013-03-13': {'sh519069': ('125.200',
+            '127.700')}, '2013-03-15': {'sh519069': ('126.000', '124.400')}, '2013-03-11': {'sh519069': ('128.000', '129.200')}, '2013-03-08': {'sh519069':
+            ('129.200', '131.100')}}</p>
+    </div>
+</div>

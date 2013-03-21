@@ -51,9 +51,9 @@
 <div class="container" style="height: 100%">
     <div class="ctl">
         <ul class="pager" style="margin-top: 5px; margin-bottom: 5px">
-            <li class="previous"><a href="#" style="width: 10%">Previous</a></li>
-            <li style="font-size: 2em; vertical-align: bottom; text-shadow: 2px 2px 0px #550;">20130314 Daily Report</li>
-            <li class="next"><a href="#" style="width: 10%">Next</a></li>
+            <li id="previous" class="previous"><a href="#" style="width: 10%">Previous</a></li>
+            <li id="title" style="font-size: 2em; vertical-align: bottom; text-shadow: 2px 2px 0px #550;"></li>
+            <li id="next" class="next"><a href="#" style="width: 10%">Next</a></li>
         </ul>
     </div>
     <div id="report_container" class="report container">
@@ -67,22 +67,47 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="enable_reports.js"></script>
 <script>
-    function isEnable(day){
-        return enable_reports.indexOf(day) != -1;
-    }
-    function loadReports(day){
-        if (isEnable(day)) {
-            $('#report_container').load('reports/' + day + '.html');
-        }
-    }
-
     $(document).ready(function(){
-        Array.prototype.indexOf = function(e){
-            for(var i=0,j; j=this; i++){
-                if(j==e){return i;}
+        function freshButtons(day){
+            var pos = index(day);
+            if(pos == 0){
+                $('#previous').attr('class', 'previous disabled').attr('day', '');
+            }else{
+                $('#previous').attr('class', 'previous').attr('day', enable_reports[pos - 1]);
+            }
+            if(pos == enable_reports.length - 1){
+                $('#next').attr('class', 'next disabled').attr('day', '');
+            }else{
+                $('#next').attr('class', 'next').attr('day', enable_reports[pos+1]);
+            }
+        }
+        function index(day){
+            var len = enable_reports.length;
+            for(var i = 0; i < len; i++){
+                if(enable_reports[i]==day){
+                    return i;
+                }
             }
             return -1;
         }
+        function isEnable(day){
+            return index(day) != -1;
+        }
+        function loadReports(day){
+            if(isEnable(day)){
+                $('#report_container').load('reports/' + day + '.html');
+                freshButtons(day)
+                $('#title').text(day + ' Daily report');
+            }
+        }
+
+        $('#previous').click(function(){
+            loadReports($('#previous').attr('day'));
+        });
+        $('#next').click(function(){
+            loadReports($('#next').attr('day'));
+        });
+
         loadReports(enable_reports[enable_reports.length - 1]);
     })
 </script>
