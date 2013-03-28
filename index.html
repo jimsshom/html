@@ -97,7 +97,7 @@
             if(isEnable(day)){
                 $('#report_container').load('reports/' + day);
                 freshButtons(day)
-                $('#title').text(day + ' Daily report');
+                $('#title').text(day.split('.')[0] + ' Daily report');
             }
         }
 
