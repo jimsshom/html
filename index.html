@@ -95,7 +95,7 @@
         }
         function loadReports(day){
             if(isEnable(day)){
-                $('#report_container').load('reports/' + day + '.html');
+                $('#report_container').load('reports/' + day);
                 freshButtons(day)
                 $('#title').text(day + ' Daily report');
             }
