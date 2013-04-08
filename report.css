@@ -5,6 +5,35 @@
     padding-right: 5px;
 }
 
+/*Weather Forcast*/
+#weather_forecast {
+    background-color: rgba(205, 222, 104, 0.56);
+}
+
+.weather_div {
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+#temp {
+    font-size: xx-large;
+    line-height: 1.5em;
+    text-indent: -5em;
+}
+
+#weather {
+    font-size: xx-large;
+    line-height: 1.5em;
+    text-indent: -5em;
+}
+
+#pubtime {
+    font-size: large;
+    line-height: 1.5em;
+    text-indent: -5em;
+}
+
 /*Minitroopers*/
 #minitroopers {
     background-color: rgba(199, 212, 232, 0.95);

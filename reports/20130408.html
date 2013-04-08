@@ -1,4 +1,23 @@
 <div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="weather_forecast" class="sub_report">
+    <h2>今日天气</h2>
+    <div class="weather_div">
+        <img id="today_img" src=""/>
+    </div>
+    <div class="weather_div">
+        <p id="temp"></p><p id="weather"></p><p id="pubtime"></p>
+    </div>
+    <div style="clear: both"/>
+    <script type="text/javascript">
+        function parseWeather(data) {
+            $('#today_img').attr('src', data.forecasts[0]['image_large'])
+            $('#temp').text(data.forecasts[0]['low'] + '-' + data.forecasts[0]['high'])
+            $('#weather').text(data.forecasts[0]['text'])
+            $('#pubtime').text('publish at: ' + data.pub)
+        }
+    </script>
+    <script type="text/javascript" src="http://weather.china.xappengine.com/api?city=hangzhou&callback=parseWeather"></script>
+    </div>
     <div id="minitroopers" class="sub_report">    
     <h2>Minitroopers</h2>
 
