@@ -1,0 +1,66 @@
+<div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="weather_forecast" class="sub_report">
+    <h2>今日天气</h2>
+    <div class="weather_div">
+        <img id="today_img" src=""/>
+    </div>
+    <div class="weather_div">
+        <p id="temp"></p><p id="weather"></p><p id="pubtime"></p>
+    </div>
+    <div style="clear: both"/>
+    <script type="text/javascript">
+        function parseWeather(data) {
+            $('#today_img').attr('src', data.forecasts[0]['image_large'])
+            $('#temp').text(data.forecasts[0]['low'] + '-' + data.forecasts[0]['high'])
+            $('#weather').text(data.forecasts[0]['text'])
+            $('#pubtime').text('publish at: ' + data.pub)
+        }
+    </script>
+    <script type="text/javascript" src="http://weather.china.xappengine.com/api?city=hangzhou&callback=parseWeather"></script>
+    </div>
+    <div id="minitroopers" class="sub_report">    
+    <h2>Minitroopers</h2>
+
+    <div class="money"><img style="max-height: 35px; padding-right: 10px" src="euro_coin.png"/><span
+            style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">86</span></div>
+    <div class="fight">
+        <h3 class="b">Fight</h3>
+        <button class="b win">Win</button><button class="b win">Win</button><button class="b win">Win</button>
+    </div>
+    <div class="fight">
+        <h3 class="b">Mission</h3>
+        <button class="b win">Win</button>
+    </div>
+    <p style="min-height: 5px"></p>
+</div>
+<div id="gn00" class="sub_report">
+    <h2>技术宅社区</h2>
+    <p>您今日已经签到，请明天再来！</p>
+</div>
+<div id="fund" class="sub_report">
+    <h2>基金走势</h2>
+    <div id="highcharts" style="width: 100%;"></div>
+    <script>
+        var dates = ['2013-03-06', '2013-03-08', '2013-03-11', '2013-03-12', '2013-03-13', '2013-03-15', '2013-03-18', '2013-03-19', '2013-03-21', '2013-03-22', '2013-03-25', '2013-03-27', '2013-03-28', '2013-03-29', '2013-04-02', '2013-04-08', '2013-04-09', '2013-04-11']
+        var datas = [{'data': [129.9, 129.2, 128.0, 127.7, 125.2, 126.0, 126.1, 125.2, 129.8, 130.5, 130.5, 130.0, 131.4, 127.8, 127.4, 125.5, 125.6, 126.3], 'name': '添富价值'}, {'data': [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 107.6, 107.9], 'name': '添富增收'}]
+        $('#highcharts').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'God Bless You'
+            },
+            xAxis: {
+                categories: dates
+            },
+            yAxis: {
+                title: {
+                    text: '基金净值'
+                }
+            },
+            series: datas
+        });
+    </script>
+</div>
+
+</div>
