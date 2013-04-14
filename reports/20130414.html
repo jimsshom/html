@@ -62,6 +62,54 @@
         });
     </script>
 </div>
+<div id="smiledays" class="sub_report">
+    <h2>Minorin-SmileDays</h2>
+    <div class="title_div">
+        <div class="title">
+            <p>2013-04-13</p>
+            <p onclick="show(); return false">最近の癖。</p>
+        </div>
+        <div class="summary">
+            <p>突然ですが、私は、ペヤングソース焼きそばが大好きです最近は、家に常備するようになりました。手軽にご飯をすませたい時は、本当に助かりますでも、いくつか家にペヤングがあると、ついつい食べちゃうんですよね…だって、美味しいんだもの〜そんなこんなでこの写真を見...</p>
+        </div>
+        <div id="diary_content" style="display: none">
+            <h1>最近の癖。</h1>
+            突然ですが、私は、ペヤングソース焼きそばが大好きです<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><br /><br /><br />最近は、家に常備するようになりました。<br />手軽にご飯をすませたい時は、本当に助かります<img src="http://picto0.jugem.jp/t/a/v/tavico/634bcc75b92d48f8da362117120b7d16.gif" /><img src="http://picto0.jugem.jp/s/m/s/smssk/408bf48533095e4872ad307cbd1d13ff.gif" /><br /><br /><br />でも、いくつか家にペヤングがあると、ついつい食べちゃうんですよね…<br />だって、美味しいんだもの〜<img src="http://picto0.jugem.jp/c/u/l/culd/6e94fabc3ec3fc4595de562c938beacb.gif" /><img src="http://picto0.jugem.jp/m/e/z/mezzo322/ad1ee5696e49fca7b9ce5ec87ffd8b02.gif" /><br /><br /><br /><img src="http://picto0.jugem.jp/p/o/m/pomeyuu/564589570fe272183b22968e61097c14.gif" />そんなこんなで<img src="http://picto0.jugem.jp/p/o/m/pomeyuu/564589570fe272183b22968e61097c14.gif" /><br /><br /><br />この写真を見てください<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130413_42840.jpg" alt="chihara130413.jpg" class="pict" height="307" width="230" /><br /></div><br /><br />非常に危険な今日この頃なのです…。<br /><br /><br />もしかしたら、私…。<br />今更ながら、カップラーメンにハマってしまったのかもしれない…<img src="http://picto0.jugem.jp/c/u/l/culd/82ee7d4119abe44d4f7f1c2f475de704.gif" /><br /><br /><br />この間、ペヤングではなく、カップラーメンを買って食べてみたんですけど、それがめちゃくちゃ美味しくて、<br />それからというもの、ついついカップラーメンを買う癖がついてしまったのです<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br /><br /><br />子供の頃から、食べる習慣なんてなかったし、たまぁーに食べても、その日だけで満足だったのに…。<br />大人になってカップラーメンにハマってしまうなんて、タチが悪いですよねっ<img src="http://picto0.jugem.jp/c/u/l/culd/76efee06d1fb767e4c9627e4c533db89.gif" /><br /><br /><br />なるべく早く卒業しないと、大変だ〜<img src="http://picto0.jugem.jp/c/u/l/culd/ef086976feba9eae6525ad6526eda40f.gif" /><img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><br /><br />
+        </div>
+        <br/><br/>
+    </div>
+    <script>
+        function show(){
+            var iWidth = document.documentElement.clientWidth;
+            var iHeight = document.documentElement.clientHeight;
+            var divWidth = document.documentElement.clientWidth * 0.65;
+            var divHeight = Math.max(document.body.clientHeight, iHeight) * 0.95
+
+            var bgObj = document.createElement("div");  //创建背景层
+            bgObj.setAttribute("id","bgbox");
+            bgObj.style.width = iWidth+"px";
+            bgObj.style.height = Math.max(document.body.clientHeight, iHeight)+"px";
+            document.body.appendChild(bgObj);       //将创建的层插入body中
+
+            var oShow = document.getElementById('popup_div');
+            var oContent = document.getElementById('diary_content');
+            oShow.innerHTML = oContent.innerHTML;
+            oShow.style.left = (iWidth-divWidth)/2+"px";
+            oShow.style.top = (iHeight-divHeight)/2+"px";
+            oShow.style.width = '65%'
+            oShow.style.height = '95%'
+
+            function oClose(){
+                document.body.removeChild(bgObj);
+                $('#popup_div').fadeOut("1000");
+                oShow.innerHTML = "";
+            }
+
+            bgObj.onclick = oClose;
+            $('#popup_div').fadeIn("1000");
+        }
+    </script>
+</div>
 
     <br/>
 </div>
