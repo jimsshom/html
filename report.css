@@ -93,3 +93,49 @@
 #fund {
     background-color: rgba(222, 185, 188, 0.56);
 }
+
+/*minorin-smiledays*/
+#smiledays {
+    background-color: #ffebfa;
+}
+
+.title_div {
+    padding-left: 20%;
+    padding-right: 20%;
+    background: -webkit-linear-gradient(top, transparent 39px, #ffe395 40px);
+    background-size: 100% 40px;
+}
+
+.title {
+    margin: 0px 20px;
+    text-align: center;
+    font-size: xx-large;
+    line-height: 1.5em;
+}
+
+.summary {
+    font-size: medium;
+}
+
+#popup_div {
+    display: none;
+    padding: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    position: absolute;
+    background: #ffffff;
+    overflow-y: auto;
+    text-align: center;
+    z-index: 2001;
+    zoom: 1;
+}
+
+#bgbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    filter: alpha(opacity = 30);
+    opacity: 0.8;
+    z-index: 2000;
+}
