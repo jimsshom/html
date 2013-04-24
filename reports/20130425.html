@@ -1,0 +1,115 @@
+<div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="weather_forecast" class="sub_report">
+    <h2>今日天气</h2>
+    <div class="weather_div">
+        <img id="today_img" src=""/>
+    </div>
+    <div class="weather_div">
+        <p id="temp"></p><p id="weather"></p><p id="pubtime"></p>
+    </div>
+    <div style="clear: both"/>
+    <script type="text/javascript">
+        function parseWeather(data) {
+            $('#today_img').attr('src', data.forecasts[0]['image_large'])
+            $('#temp').text(data.forecasts[0]['low'] + '-' + data.forecasts[0]['high'])
+            $('#weather').text(data.forecasts[0]['text'])
+            $('#pubtime').text('publish at: ' + data.pub)
+        }
+    </script>
+    <script type="text/javascript" src="http://weather.china.xappengine.com/api?city=hangzhou&callback=parseWeather"></script>
+    </div>
+    <div id="minitroopers" class="sub_report">    
+    <h2>Minitroopers</h2>
+
+    <div class="money"><img style="max-height: 35px; padding-right: 10px" src="euro_coin.png"/><span
+            style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">32</span></div>
+    <div class="fight">
+        <h3 class="b">Fight</h3>
+        <button class="b win">Win</button><button class="b win">Win</button><button class="b win">Win</button>
+    </div>
+    <div class="fight">
+        <h3 class="b">Mission</h3>
+        <button class="b defeat">Defeat</button><button class="b defeat">Defeat</button><button class="b defeat">Defeat</button>
+    </div>
+    <p style="min-height: 5px"></p>
+</div>
+<div id="gn00" class="sub_report">
+    <h2>技术宅社区</h2>
+    <p>恭喜你签到成功!获得随机奖励 宅币 25 .</p>
+</div>
+<div id="fund" class="sub_report">
+    <h2>基金走势</h2>
+    <div id="highcharts" style="width: 100%;"></div>
+    <script>
+        var dates = ['2013-03-06', '2013-03-08', '2013-03-11', '2013-03-12', '2013-03-13', '2013-03-15', '2013-03-18', '2013-03-19', '2013-03-21', '2013-03-22', '2013-03-25', '2013-03-27', '2013-03-28', '2013-03-29', '2013-04-02', '2013-04-09', '2013-04-12', '2013-04-18', '2013-04-22', '2013-04-23', '2013-04-24']
+        var datas = [{'data': [129.9, 129.2, 128.0, 127.7, 125.2, 126.0, 126.1, 125.2, 129.8, 130.5, 130.5, 130.0, 131.4, 127.8, 127.4, 125.6, 126.2, 128.4, 130.8, 130.5, 126.7], 'name': '添富价值'}, {'data': [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 107.6, 108.0, 107.7, 107.9, 107.7, 107.1], 'name': '添富增收'}]
+        $('#highcharts').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'God Bless You'
+            },
+            xAxis: {
+                categories: dates
+            },
+            yAxis: {
+                title: {
+                    text: '基金净值'
+                }
+            },
+            series: datas
+        });
+    </script>
+</div>
+<div id="smiledays" class="sub_report">
+    <h2>Minorin-SmileDays</h2>
+    <div class="title_div">
+        <div class="title">
+            <p>2013-04-24</p>
+            <p onclick="show(); return false">今日は涙の記念日！！</p>
+        </div>
+        <div class="summary">
+            <p>HAPPY BIRTHDAY〜本日、「この世界は僕らを待っていた」がリリースになりましたぁーーー…っというわけで、今日は朝から秋葉原へ行き、店舗まわりをさせていただきましたどのお店に行っても、売り場が鮮やかにディスプレイされていて夏を感じました（ついに発売になったん...</p>
+        </div>
+        <div id="diary_content" style="display: none">
+            <h1>今日は涙の記念日！！</h1>
+            HAPPY BIRTHDAY〜<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br /><br /><br /><br /><span><span>本日、<a href="http://www.lantis.jp/release-item.php?id=10daae0be7ec10edd0d927b217e32dc8" target="_blank">「この世界は僕らを待っていた」</a>がリリースになりましたぁーーー<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /></span></span><span><span><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /></span></span><span><span><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /></span></span><br /><br /><br /><br />…っというわけで、今日は朝から秋葉原へ行き、店舗まわりをさせていただきました<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br />どのお店に行っても、売り場が鮮やかにディスプレイされていて夏を感じました<img src="http://picto0.jugem.jp/c/u/l/culd/f11f55382d05d1f72c0a54f60ec5dc5d.gif" /><img src="http://picto0.jugem.jp/2/t/w/2twelfth/4cd2dc201b43cbc5eea3c0a31c4dc1f4.gif" /><br />（ついに発売になったんだなぁ…）って、すっごく感激しました〜<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><br /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130424_43177.jpg" alt="chihara130424_01.jpg" class="pict" height="307" width="230" /><br /></div><br /><br />お店でこのCDを手にとってくれている方もいて、とっても嬉しかったです<img src="http://picto0.jugem.jp/t/a/v/tavico/634bcc75b92d48f8da362117120b7d16.gif" /><br />もうすでに手に入れてくれたみんな、どうもありがとうね<img src="http://picto0.jugem.jp/c/u/l/culd/6e94fabc3ec3fc4595de562c938beacb.gif" /><img src="http://picto0.jugem.jp/m/e/z/mezzo322/ad1ee5696e49fca7b9ce5ec87ffd8b02.gif" /><img src="http://picto0.jugem.jp/m/e/z/mezzo322/ad1ee5696e49fca7b9ce5ec87ffd8b02.gif" /><br />ぜひいっぱい聴いてあげてください<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br /><br /><br />お店では、メッセージ＆サインもばっちり書かせていただきましたよ<img src="http://picto0.jugem.jp/y/u/u/yuupan/a5f6de686ce5f8f416cb6c1aa23d017c.gif" /><br /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130424_43178.jpg" alt="chihara130424_02.jpg" class="pict" height="307" width="230" /><br /><br /><img src="http://minori-smiledays.img.jugem.jp/20130424_43179.jpg" alt="chihara130424_03.jpg" class="pict" height="307" width="230" /><br /></div><br /><br />お忙しい中対応してくださった各店舗のスタッフのみなさま、どうもありがとうございました<span><span></span></span><img src="http://picto0.jugem.jp/c/u/l/culd/a7ab6250f2dd065a6f6c6b5dbdab2e03.gif" /><img src="http://picto0.jugem.jp/m/e/z/mezzo322/ad1ee5696e49fca7b9ce5ec87ffd8b02.gif" /><img src="http://picto0.jugem.jp/m/e/z/mezzo322/ad1ee5696e49fca7b9ce5ec87ffd8b02.gif" /><br />またお邪魔しますね<img src="http://picto0.jugem.jp/r/e/l/rely-do/0e456a163af74ead4e44c4f03db3283a.gif" /><img src="http://picto0.jugem.jp/r/e/l/rely-do/0e456a163af74ead4e44c4f03db3283a.gif" /><br /><br /><br />このニューシングルには３曲の新曲が収録されているのですが、あらためて現在放送中の<br /><span><a href="http://lantis-net.com/minorhythm/" target="_blank">「radio minorhythm」</a></span>で、この３曲について熱く熱く語っていますので、お時間のある時にでも、ぜひ聴いてみてください<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130424_43180.jpg" alt="chihara130424_04.jpg" class="pict" height="230" width="307" /><br /></div><br /><br />そして今日は、涙が出るほど、嬉しいお知らせがあります<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br /><br /><br /><br /><br /><span><span><img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" />6月1日（土）<img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" /><br /></span></span><br /><br /><br /><span><span>茅原実里のオフィシャルファンクラブ<a href="http://chiharaminori.net/m-smile/" target="_blank">「M-Smile」</a>の誕生が大決定しましたーーーー</span></span><span><span><span><span><img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /></span></span></span></span><span><span><span><span><span><span><img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /></span></span></span></span><img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /></span></span><span><span><span><span><img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /></span></span><img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /><br /></span></span><br /><br /><br />私の大好きなみんなの笑顔を、いっぱいいっぱい咲かせることのできる場所に育てていきたいと強く思っています。色々と迷惑をかけたり、心配をさせてしまったみんなに、こういう形で報告することができて、心から嬉しく思っています<img src="http://picto0.jugem.jp/c/u/l/culd/ef086976feba9eae6525ad6526eda40f.gif" />（涙）<br /><span>5月1日（水）19時から</span>入会受付が始まります<img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /><img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /><img src="http://picto0.jugem.jp/n/a/n/nanotuki/992573362a3bdf3ef9502fb136324043.gif" /><br /><br /><br /><br />そして…<br /><br /><br /><br /><span><span><br /><img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" />8月3日（土）＆ 8月4日（日）<img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" /><br /></span></span><br /><br /><br /><br /><span><span><a href="http://chiharaminori.net/live2013/index.html" target="_blank">MINORI CHIHARA LIVE 2013 "SUMMER DREAM"</a><br />真夏の野外ライブが大決定しましたーーーー</span></span><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><br /><br /><br /><br />今年も来てくれたみんなと一緒に、最高の時間を過ごせるように、みんなの最高の笑顔を見れるように、気合いをいれて準備を進めていきたいと息巻いていますので、期待して待っててくださいね<img src="http://picto0.jugem.jp/p/-/s/p-style/b534571459087ca9fae657444619fde4.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/a2b73817976d86a39a230bddf8cb759c.gif" /><br />そして、場所はもちろん、<span><span>河口湖ステラシアター</span></span>ですっ<img src="http://picto0.jugem.jp/y/u/u/yuupan/a5f6de686ce5f8f416cb6c1aa23d017c.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/a5f6de686ce5f8f416cb6c1aa23d017c.gif" /><br /><br /><br /><br />はぁーーー。。。<br />胸がいっぱいです。<br /><br /><br />本当に嬉しいです…。<br /><br /><br />今日は涙の記念日だぁーーーーー<img src="http://picto0.jugem.jp/c/u/l/culd/ef086976feba9eae6525ad6526eda40f.gif" /><img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><br /><br /><br /><br />みんなが私を応援してくれる気持ちが、私を強くしてくれます。<br /><br /><br />あらためて、みんなに感謝です。<br />本当に本当にどうもありがとうーーーーーー<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br /><br />
+        </div>
+        <br/><br/>
+    </div>
+    <script>
+        function show(){
+            var iWidth = document.documentElement.clientWidth;
+            var iHeight = document.documentElement.clientHeight;
+            var divWidth = document.documentElement.clientWidth * 0.65;
+            var divHeight = Math.max(document.body.clientHeight, iHeight) * 0.95
+
+            var bgObj = document.createElement("div");  //创建背景层
+            bgObj.setAttribute("id","bgbox");
+            bgObj.style.width = iWidth+"px";
+            bgObj.style.height = Math.max(document.body.clientHeight, iHeight)+"px";
+            document.body.appendChild(bgObj);       //将创建的层插入body中
+
+            var oShow = document.getElementById('popup_div');
+            var oContent = document.getElementById('diary_content');
+            oShow.innerHTML = oContent.innerHTML;
+            oShow.style.left = (iWidth-divWidth)/2+"px";
+            oShow.style.top = (iHeight-divHeight)/2+"px";
+            oShow.style.width = '65%'
+            oShow.style.height = '95%'
+
+            function oClose(){
+                document.body.removeChild(bgObj);
+                $('#popup_div').fadeOut("1000");
+                oShow.innerHTML = "";
+            }
+
+            bgObj.onclick = oClose;
+            $('#popup_div').fadeIn("1000");
+        }
+    </script>
+</div>
+
+    <br/>
+</div>
