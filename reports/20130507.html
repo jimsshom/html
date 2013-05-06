@@ -1,0 +1,115 @@
+<div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="weather_forecast" class="sub_report">
+    <h2>今日天气</h2>
+    <div class="weather_div">
+        <img id="today_img" src=""/>
+    </div>
+    <div class="weather_div">
+        <p id="temp"></p><p id="weather"></p><p id="pubtime"></p>
+    </div>
+    <div style="clear: both"/>
+    <script type="text/javascript">
+        function parseWeather(data) {
+            $('#today_img').attr('src', data.forecasts[0]['image_large'])
+            $('#temp').text(data.forecasts[0]['low'] + '-' + data.forecasts[0]['high'])
+            $('#weather').text(data.forecasts[0]['text'])
+            $('#pubtime').text('publish at: ' + data.pub)
+        }
+    </script>
+    <script type="text/javascript" src="http://weather.china.xappengine.com/api?city=hangzhou&callback=parseWeather"></script>
+    </div>
+    <div id="minitroopers" class="sub_report">    
+    <h2>Minitroopers</h2>
+
+    <div class="money"><img style="max-height: 35px; padding-right: 10px" src="euro_coin.png"/><span
+            style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">52</span></div>
+    <div class="fight">
+        <h3 class="b">Fight</h3>
+        <button class="b win">Win</button><button class="b win">Win</button><button class="b win">Win</button>
+    </div>
+    <div class="fight">
+        <h3 class="b">Mission</h3>
+        <button class="b win">Win</button>
+    </div>
+    <p style="min-height: 5px"></p>
+</div>
+<div id="gn00" class="sub_report">
+    <h2>技术宅社区</h2>
+    <p>恭喜你签到成功!获得随机奖励 宅币 47 .</p>
+</div>
+<div id="fund" class="sub_report">
+    <h2>基金走势</h2>
+    <div id="highcharts" style="width: 100%;"></div>
+    <script>
+        var dates = ['2013-03-06', '2013-03-08', '2013-03-11', '2013-03-12', '2013-03-13', '2013-03-15', '2013-03-18', '2013-03-19', '2013-03-21', '2013-03-22', '2013-03-25', '2013-03-27', '2013-03-28', '2013-03-29', '2013-04-02', '2013-04-09', '2013-04-12', '2013-04-18', '2013-04-22', '2013-04-23', '2013-04-24', '2013-04-25', '2013-05-06']
+        var datas = [{'data': [129.9, 129.2, 128.0, 127.7, 125.2, 126.0, 126.1, 125.2, 129.8, 130.5, 130.5, 130.0, 131.4, 127.8, 127.4, 125.6, 126.2, 128.4, 130.8, 130.5, 126.7, 129.2, 128.9], 'name': '添富价值'}, {'data': [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 107.6, 108.0, 107.7, 107.9, 107.7, 107.1, 107.3, 107.4], 'name': '添富增收'}]
+        $('#highcharts').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'God Bless You'
+            },
+            xAxis: {
+                categories: dates
+            },
+            yAxis: {
+                title: {
+                    text: '基金净值'
+                }
+            },
+            series: datas
+        });
+    </script>
+</div>
+<div id="smiledays" class="sub_report">
+    <h2>Minorin-SmileDays</h2>
+    <div class="title_div">
+        <div class="title">
+            <p>2013-05-06</p>
+            <p onclick="show(); return false">みのりんの衣装☆</p>
+        </div>
+        <div class="summary">
+            <p>じゃん実家で姪っ子ちゃんが見せてくれた絵ですまだ小学校一年生なのに上手でしょう？？しかも、全部「みのりんの衣装」だそうです可愛い衣装もあれば、斬新なデザインの衣装までこんなにいっぱい考えてくれたので、絵を見ながら「これが着たい〜」なんて、私もテンション...</p>
+        </div>
+        <div id="diary_content" style="display: none">
+            <h1>みのりんの衣装☆</h1>
+            じゃん<img src="http://picto0.jugem.jp/r/e/l/rely-do/0e456a163af74ead4e44c4f03db3283a.gif" /><br /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130506_43487.jpg" width="230" height="307" alt="" class="pict" /></div><br /><br /><br />実家で姪っ子ちゃんが見せてくれた絵です<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><br /><br /><br />まだ小学校一年生なのに上手でしょう？？<br />しかも、全部<span>「みのりんの衣装」</span>だそうです<img src="http://picto0.jugem.jp/c/u/l/culd/a7ab6250f2dd065a6f6c6b5dbdab2e03.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><br /><br /><br />可愛い衣装もあれば、斬新なデザインの衣装まで<img src="http://picto0.jugem.jp/c/u/t/cutegazou/79c270084b233f4cd0163dcab71f1810.gif" /><br />こんなにいっぱい考えてくれたので、絵を見ながら「これが着たい〜<img src="http://picto0.jugem.jp/t/a/v/tavico/634bcc75b92d48f8da362117120b7d16.gif" />」なんて、私もテンションが上がってしまいました<img src="http://picto0.jugem.jp/p/-/s/p-style/b534571459087ca9fae657444619fde4.gif" /><img src="http://picto0.jugem.jp/c/u/l/culd/6e94fabc3ec3fc4595de562c938beacb.gif" /><img src="http://picto0.jugem.jp/s/m/s/smssk/408bf48533095e4872ad307cbd1d13ff.gif" /><br /><br /><br />それにしても、子供の才能ってすごいですね。<br />これから彼女がどんな夢を見つけて、どんな未来を生きていくのか、私の楽しみでもあります。<br />これからの成長が本当に楽しみです<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /><br /><br /><br /><br /><img src="http://picto0.jugem.jp/p/o/m/pomeyuu/564589570fe272183b22968e61097c14.gif" />そんなこんなで<img src="http://picto0.jugem.jp/p/o/m/pomeyuu/564589570fe272183b22968e61097c14.gif" /><br /><br /><br /><a href="http://lantis-net.com/minorhythm/" target="_blank">radio minorhythm</a>でも話しましたが、<span><span>「GW」</span></span>とは、映画を観るキャンペーンで名付けられたようです<img src="http://picto0.jugem.jp/r/e/l/rely-do/0e456a163af74ead4e44c4f03db3283a.gif" /><br /><br /><br />…では、映画を観に行かなければ<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br />っということで、<a href="http://www.foxmovies.jp/lincoln-movie/" target="_blank">「リンカーン」</a>と<a href="http://www.toshokan-sensou-movie.com/" target="_blank">「図書館戦争」</a>を観てきました<img src="http://picto0.jugem.jp/c/u/l/culd/de65685e793a7797c5a0712d81806c38.gif" /><img src="http://picto0.jugem.jp/2/t/w/2twelfth/4cd2dc201b43cbc5eea3c0a31c4dc1f4.gif" /><br /><br /><br />特にリンカーンはずっと観たくて公開まで楽しみに待っていたので、やっと観れて満足でした〜<img src="http://picto0.jugem.jp/y/u/u/yuupan/e3d8da886eb4e74eb40d600e79fcaab4.gif" />　面白かったです<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br /><br /><br /><br />いや〜<img src="http://picto0.jugem.jp/r/u/r/rurimatsuri/8109999ab23557ba54e9187d3771139c.gif" /><br />今日であっという間にGWもおしまいですね〜<img src="http://picto0.jugem.jp/c/u/l/culd/a7ab6250f2dd065a6f6c6b5dbdab2e03.gif" /><br />素敵な思い出いっぱい作れたかなー？<br />
+        </div>
+        <br/><br/>
+    </div>
+    <script>
+        function show(){
+            var iWidth = document.documentElement.clientWidth;
+            var iHeight = document.documentElement.clientHeight;
+            var divWidth = document.documentElement.clientWidth * 0.65;
+            var divHeight = Math.max(document.body.clientHeight, iHeight) * 0.95
+
+            var bgObj = document.createElement("div");  //创建背景层
+            bgObj.setAttribute("id","bgbox");
+            bgObj.style.width = iWidth+"px";
+            bgObj.style.height = Math.max(document.body.clientHeight, iHeight)+"px";
+            document.body.appendChild(bgObj);       //将创建的层插入body中
+
+            var oShow = document.getElementById('popup_div');
+            var oContent = document.getElementById('diary_content');
+            oShow.innerHTML = oContent.innerHTML;
+            oShow.style.left = (iWidth-divWidth)/2+"px";
+            oShow.style.top = (iHeight-divHeight)/2+"px";
+            oShow.style.width = '65%'
+            oShow.style.height = '95%'
+
+            function oClose(){
+                document.body.removeChild(bgObj);
+                $('#popup_div').fadeOut("1000");
+                oShow.innerHTML = "";
+            }
+
+            bgObj.onclick = oClose;
+            $('#popup_div').fadeIn("1000");
+        }
+    </script>
+</div>
+
+    <br/>
+</div>
