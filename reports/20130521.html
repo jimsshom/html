@@ -1,0 +1,115 @@
+<div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="weather_forecast" class="sub_report">
+    <h2>今日天气</h2>
+    <div class="weather_div">
+        <img id="today_img" src=""/>
+    </div>
+    <div class="weather_div">
+        <p id="temp"></p><p id="weather"></p><p id="pubtime"></p>
+    </div>
+    <div style="clear: both"/>
+    <script type="text/javascript">
+        function parseWeather(data) {
+            $('#today_img').attr('src', data.forecasts[0]['image_large'])
+            $('#temp').text(data.forecasts[0]['low'] + '-' + data.forecasts[0]['high'])
+            $('#weather').text(data.forecasts[0]['text'])
+            $('#pubtime').text('publish at: ' + data.pub)
+        }
+    </script>
+    <script type="text/javascript" src="http://weather.china.xappengine.com/api?city=hangzhou&callback=parseWeather"></script>
+    </div>
+    <div id="minitroopers" class="sub_report">    
+    <h2>Minitroopers</h2>
+
+    <div class="money"><img style="max-height: 35px; padding-right: 10px" src="euro_coin.png"/><span
+            style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">118</span></div>
+    <div class="fight">
+        <h3 class="b">Fight</h3>
+        <button class="b win">Win</button><button class="b win">Win</button><button class="b win">Win</button>
+    </div>
+    <div class="fight">
+        <h3 class="b">Mission</h3>
+        <button class="b defeat">Defeat</button><button class="b defeat">Defeat</button><button class="b defeat">Defeat</button>
+    </div>
+    <p style="min-height: 5px"></p>
+</div>
+<div id="gn00" class="sub_report">
+    <h2>技术宅社区</h2>
+    <p>恭喜你签到成功!获得随机奖励 宅币 27 .</p>
+</div>
+<div id="fund" class="sub_report">
+    <h2>基金走势</h2>
+    <div id="highcharts" style="width: 100%;"></div>
+    <script>
+        var dates = ['2013-03-06', '2013-03-08', '2013-03-11', '2013-03-12', '2013-03-13', '2013-03-15', '2013-03-18', '2013-03-19', '2013-03-21', '2013-03-22', '2013-03-25', '2013-03-27', '2013-03-28', '2013-03-29', '2013-04-02', '2013-04-09', '2013-04-12', '2013-04-18', '2013-04-22', '2013-04-23', '2013-04-24', '2013-04-25', '2013-05-06', '2013-05-07', '2013-05-08', '2013-05-09', '2013-05-10', '2013-05-13', '2013-05-14', '2013-05-15', '2013-05-16', '2013-05-20']
+        var datas = [{'data': [129.9, 129.2, 128.0, 127.7, 125.2, 126.0, 126.1, 125.2, 129.8, 130.5, 130.5, 130.0, 131.4, 127.8, 127.4, 125.6, 126.2, 128.4, 130.8, 130.5, 126.7, 129.2, 128.9, 130.3, 130.1, 131.1, 130.3, 130.4, 130.0, 128.5, 129.5, 134.7], 'name': '添富价值'}, {'data': [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 107.6, 108.0, 107.7, 107.9, 107.7, 107.1, 107.3, 107.4, 107.7, 107.9, 108.1, 108.0, 108.0, 108.1, 107.9, 108.1, 108.8], 'name': '添富增收'}]
+        $('#highcharts').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'God Bless You'
+            },
+            xAxis: {
+                categories: dates
+            },
+            yAxis: {
+                title: {
+                    text: '基金净值'
+                }
+            },
+            series: datas
+        });
+    </script>
+</div>
+<div id="smiledays" class="sub_report">
+    <h2>Minorin-SmileDays</h2>
+    <div class="title_div">
+        <div class="title">
+            <p>2013-05-20</p>
+            <p onclick="show(); return false">わかめスープ付っ！？</p>
+        </div>
+        <div class="summary">
+            <p>この間、久々に安保さんに会いましたとっても元気そうでしたでも、今年の鹿角はまだまだ寒くって、田植えが始められない状況だそうです早くあたたかくなるといいですね〜そして、また美味しいお米が沢山育ちますように…そんな、安保さん。最近ペヤングにハマっている私に...</p>
+        </div>
+        <div id="diary_content" style="display: none">
+            <h1>わかめスープ付っ！？</h1>
+            この間、久々に<a href="http://umaikome.jp/" target="_blank">安保さん</a>に会いました<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /><br /><br /><br />とっても元気そうでした<img src="http://picto0.jugem.jp/r/e/l/rely-do/0e456a163af74ead4e44c4f03db3283a.gif" /><br />でも、今年の鹿角はまだまだ寒くって、田植えが始められない状況だそうです<img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><br />早くあたたかくなるといいですね〜<img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" /><br />そして、また美味しいお米が沢山育ちますように…<img src="http://picto0.jugem.jp/m/u/n/muneyuka/d6c8681053d180cae9523efbc81ee0ea.gif" /><br /><br /><br />そんな、安保さん。<br />最近ペヤングにハマっている私に、東北のカップ焼きそばをプレゼントしてくれました<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130520_43937.jpg" alt="chihara130520.jpg" class="pict" height="307" width="230" /><br /></div><br /><span><span>「焼きそばBAGOOOON」</span></span>という、なんとも勢いのある名前。<br />しかも、嬉しい「わかめスープ付」<img src="http://picto0.jugem.jp/t/a/v/tavico/634bcc75b92d48f8da362117120b7d16.gif" /><br /><br /><br />スープが付いているカップ焼きそばは初めて見たので、びっくりしました<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br />これはありがたいですねぇ<img src="http://picto0.jugem.jp/c/u/l/culd/6e94fabc3ec3fc4595de562c938beacb.gif" /><br /><br /><br /><span>「ペヤングよりも美味しいです<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" />」</span>と豪語していた安保さん<img src="http://picto0.jugem.jp/s/m/s/smssk/408bf48533095e4872ad307cbd1d13ff.gif" /><br /><br /><br />早速食べてみましたが、なかなか美味しかったです<img src="http://picto0.jugem.jp/p/-/s/p-style/b534571459087ca9fae657444619fde4.gif" /><img src="http://picto0.jugem.jp/p/o/o/poohlia/bf4b323b4b6970574ebc47764ad1cb4d.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /><br />ペヤングもめちゃくちゃ美味しいので、甲乙つけがたいですが、美味しかったです<img src="http://picto0.jugem.jp/y/u/u/yuupan/e3d8da886eb4e74eb40d600e79fcaab4.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/e3d8da886eb4e74eb40d600e79fcaab4.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/e3d8da886eb4e74eb40d600e79fcaab4.gif" /><br /><br /><br />安保さん、ありがとう<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br />また東京に遊びに来てね〜<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><br /><br /><br />…しかし、茅原実里。<br />いい加減カップ焼きそばを卒業せねば…<img src="http://picto0.jugem.jp/m/u/n/muneyuka/ff25644dddd364a8cd43751ca121aaf1.gif" /><img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><br />
+        </div>
+        <br/><br/>
+    </div>
+    <script>
+        function show(){
+            var iWidth = document.documentElement.clientWidth;
+            var iHeight = document.documentElement.clientHeight;
+            var divWidth = document.documentElement.clientWidth * 0.65;
+            var divHeight = Math.max(document.body.clientHeight, iHeight) * 0.95
+
+            var bgObj = document.createElement("div");  //创建背景层
+            bgObj.setAttribute("id","bgbox");
+            bgObj.style.width = iWidth+"px";
+            bgObj.style.height = Math.max(document.body.clientHeight, iHeight)+"px";
+            document.body.appendChild(bgObj);       //将创建的层插入body中
+
+            var oShow = document.getElementById('popup_div');
+            var oContent = document.getElementById('diary_content');
+            oShow.innerHTML = oContent.innerHTML;
+            oShow.style.left = (iWidth-divWidth)/2+"px";
+            oShow.style.top = (iHeight-divHeight)/2+"px";
+            oShow.style.width = '65%'
+            oShow.style.height = '95%'
+
+            function oClose(){
+                document.body.removeChild(bgObj);
+                $('#popup_div').fadeOut("1000");
+                oShow.innerHTML = "";
+            }
+
+            bgObj.onclick = oClose;
+            $('#popup_div').fadeIn("1000");
+        }
+    </script>
+</div>
+
+    <br/>
+</div>
