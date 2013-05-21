@@ -1,0 +1,115 @@
+<div class="report" style="margin-left: 4%; margin-right: 4%">
+    <div id="weather_forecast" class="sub_report">
+    <h2>今日天气</h2>
+    <div class="weather_div">
+        <img id="today_img" src=""/>
+    </div>
+    <div class="weather_div">
+        <p id="temp"></p><p id="weather"></p><p id="pubtime"></p>
+    </div>
+    <div style="clear: both"/>
+    <script type="text/javascript">
+        function parseWeather(data) {
+            $('#today_img').attr('src', data.forecasts[0]['image_large'])
+            $('#temp').text(data.forecasts[0]['low'] + '-' + data.forecasts[0]['high'])
+            $('#weather').text(data.forecasts[0]['text'])
+            $('#pubtime').text('publish at: ' + data.pub)
+        }
+    </script>
+    <script type="text/javascript" src="http://weather.china.xappengine.com/api?city=hangzhou&callback=parseWeather"></script>
+    </div>
+    <div id="minitroopers" class="sub_report">    
+    <h2>Minitroopers</h2>
+
+    <div class="money"><img style="max-height: 35px; padding-right: 10px" src="euro_coin.png"/><span
+            style="line-height: 35px; font-size: 1.5em; color: #b8860b; vertical-align: bottom; font-weight: bolder">128</span></div>
+    <div class="fight">
+        <h3 class="b">Fight</h3>
+        <button class="b win">Win</button><button class="b win">Win</button><button class="b win">Win</button>
+    </div>
+    <div class="fight">
+        <h3 class="b">Mission</h3>
+        <button class="b win">Win</button>
+    </div>
+    <p style="min-height: 5px"></p>
+</div>
+<div id="gn00" class="sub_report">
+    <h2>技术宅社区</h2>
+    <p>恭喜你签到成功!获得随机奖励 宅币 16 .</p>
+</div>
+<div id="fund" class="sub_report">
+    <h2>基金走势</h2>
+    <div id="highcharts" style="width: 100%;"></div>
+    <script>
+        var dates = ['2013-03-06', '2013-03-08', '2013-03-11', '2013-03-12', '2013-03-13', '2013-03-15', '2013-03-18', '2013-03-19', '2013-03-21', '2013-03-22', '2013-03-25', '2013-03-27', '2013-03-28', '2013-03-29', '2013-04-02', '2013-04-09', '2013-04-12', '2013-04-18', '2013-04-22', '2013-04-23', '2013-04-24', '2013-04-25', '2013-05-06', '2013-05-07', '2013-05-08', '2013-05-09', '2013-05-10', '2013-05-13', '2013-05-14', '2013-05-15', '2013-05-16', '2013-05-20', '2013-05-21']
+        var datas = [{'data': [129.9, 129.2, 128.0, 127.7, 125.2, 126.0, 126.1, 125.2, 129.8, 130.5, 130.5, 130.0, 131.4, 127.8, 127.4, 125.6, 126.2, 128.4, 130.8, 130.5, 126.7, 129.2, 128.9, 130.3, 130.1, 131.1, 130.3, 130.4, 130.0, 128.5, 129.5, 134.7, 135.8], 'name': '添富价值'}, {'data': [100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 107.6, 108.0, 107.7, 107.9, 107.7, 107.1, 107.3, 107.4, 107.7, 107.9, 108.1, 108.0, 108.0, 108.1, 107.9, 108.1, 108.8, 109.1], 'name': '添富增收'}]
+        $('#highcharts').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'God Bless You'
+            },
+            xAxis: {
+                categories: dates
+            },
+            yAxis: {
+                title: {
+                    text: '基金净值'
+                }
+            },
+            series: datas
+        });
+    </script>
+</div>
+<div id="smiledays" class="sub_report">
+    <h2>Minorin-SmileDays</h2>
+    <div class="title_div">
+        <div class="title">
+            <p>2013-05-21</p>
+            <p onclick="show(); return false">うんともすんともでした。</p>
+        </div>
+        <div class="summary">
+            <p>ただいまっ今日は袖がいらないくらい暑い一日でしたね〜駅から歩いただけで汗だくですさて、今日はニコ生「スパロウズホテル こちらフロントでございます」第３回目の放送でした〜見てくれた人、ありがとうコメント書いてくれた人、ありがとう今日も自由奔放な回になりま...</p>
+        </div>
+        <div id="diary_content" style="display: none">
+            <h1>うんともすんともでした。</h1>
+            ただいまっ<img src="http://picto0.jugem.jp/c/h/o/choco-milk/8d95a590208662e10b5064fa8a2be940.gif" /><br /><br /><br />今日は袖がいらないくらい暑い一日でしたね〜<img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" /><img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" /><img src="http://picto0.jugem.jp/e/r/i/eri-rw/553c08f961aa6a0ff79bc2fb3ddb749d.gif" /><br />駅から歩いただけで汗だくです<img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><br /><br /><br />さて、今日はニコ生<a href="http://live.nicovideo.jp/watch/lv137641762" target="_blank"><span><span>「スパロウズホテル こちらフロントでございます<img src="http://picto0.jugem.jp/c/u/t/cutegazou/79c270084b233f4cd0163dcab71f1810.gif" />」</span></span></a><span><span><br /></span></span>第３回目の放送でした〜<img src="http://picto0.jugem.jp/c/u/l/culd/e62e4b86e18619f054878ad3e85d4013.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /><br /><br /><br /><br /><div><img src="http://minori-smiledays.img.jugem.jp/20130521_43953.jpg" alt="130521chihara.jpg" class="pict" height="307" width="230" /><br /></div><br /><br /><br />見てくれた人、ありがとう<img src="http://picto0.jugem.jp/p/-/s/p-style/b534571459087ca9fae657444619fde4.gif" /><img src="http://picto0.jugem.jp/c/u/l/culd/f11f55382d05d1f72c0a54f60ec5dc5d.gif" /><img src="http://picto0.jugem.jp/2/t/w/2twelfth/4cd2dc201b43cbc5eea3c0a31c4dc1f4.gif" /><br />コメント書いてくれた人、ありがとう<img src="http://picto0.jugem.jp/p/-/s/p-style/b534571459087ca9fae657444619fde4.gif" /><img src="http://picto0.jugem.jp/c/u/l/culd/f11f55382d05d1f72c0a54f60ec5dc5d.gif" /><img src="http://picto0.jugem.jp/2/t/w/2twelfth/4cd2dc201b43cbc5eea3c0a31c4dc1f4.gif" /><br /><br /><br />今日も自由奔放な回になりました<img src="http://picto0.jugem.jp/c/h/o/choco-milk/74063a4bbb07c486396c0f273b882de8.gif" /><img src="http://picto0.jugem.jp/m/a/c/machibana/994ee0fa684782accf472234efd5fac4.gif" /><br />とっても楽しかったです<img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><img src="http://picto0.jugem.jp/t/r/u/truth8-1/b53b795a0c7cf29f8bcb5097bc3b4ac2.gif" /><br /><br /><br />私とはるかんの息もピッタリ<img src="http://picto0.jugem.jp/y/u/u/yuupan/a5f6de686ce5f8f416cb6c1aa23d017c.gif" /><br />みんなには毎回<span><span>「溝がある」</span></span>って言われ続けているけど、溝なんてないもん<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><img src="http://picto0.jugem.jp/s/m/s/smssk/408bf48533095e4872ad307cbd1d13ff.gif" /><br /><br /><br />絵を描くコーナーが多い番組ですが、絵を描くことがこんなに難しいとはっ<img src="http://picto0.jugem.jp/c/u/l/culd/82ee7d4119abe44d4f7f1c2f475de704.gif" /><img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /><br />番組の終盤になってくると疲れてきます…<img src="http://picto0.jugem.jp/c/o/u/countryzanmai/87549e4117df22056abbc61b5da1d196.gif" /> <br />何気にイメージしたものを絵にするのって、頭を使っているのかもしれませんね<img src="http://picto0.jugem.jp/c/u/l/culd/ef086976feba9eae6525ad6526eda40f.gif" /><br /><br /><br />あと、私の書く文字の<span><span>「ク」</span></span>は<span><span>「ワ」</span></span>に見えるんですね<img src="http://picto0.jugem.jp/m/u/n/muneyuka/ff25644dddd364a8cd43751ca121aaf1.gif" /><img src="http://picto0.jugem.jp/s/m/s/smssk/408bf48533095e4872ad307cbd1d13ff.gif" /><br />次回は、ちゃんとした文字を書けるように頑張ります<img src="http://picto0.jugem.jp/a/r/i/ariko0928/12ba6b3a617d578307105df22b448c3c.gif" /><br /><br /><br />…それにしても、はるかんと腕相撲しても、うんともすんとも、まったく何も感じません<img src="http://picto0.jugem.jp/c/u/l/culd/52e8c9ffb832ffff2a7a029c80a61e69.gif" /><br />はるかんは腕細いし、きゃしゃだからね〜<img src="http://picto0.jugem.jp/t/a/v/tavico/634bcc75b92d48f8da362117120b7d16.gif" /><br />またいつでも、挑戦状は受けますよ<img src="http://picto0.jugem.jp/y/u/u/yuupan/e3d8da886eb4e74eb40d600e79fcaab4.gif" /><img src="http://picto0.jugem.jp/s/m/s/smssk/408bf48533095e4872ad307cbd1d13ff.gif" /><br /><br /><br />そんなこんなで<img src="http://picto0.jugem.jp/t/a/v/tavico/634bcc75b92d48f8da362117120b7d16.gif" /><br />引き続き、TVアニメ<span><a href="http://www.takeshobo.co.jp/sp/tv_sparrows/" target="_blank">「スパロウズホテル」</a></span>よろしくお願いします<img src="http://picto0.jugem.jp/c/u/l/culd/f11f55382d05d1f72c0a54f60ec5dc5d.gif" /><img src="http://picto0.jugem.jp/y/u/u/yuupan/945bf05b5d1bcd3881158627d0f242ad.gif" /><br />
+        </div>
+        <br/><br/>
+    </div>
+    <script>
+        function show(){
+            var iWidth = document.documentElement.clientWidth;
+            var iHeight = document.documentElement.clientHeight;
+            var divWidth = document.documentElement.clientWidth * 0.65;
+            var divHeight = Math.max(document.body.clientHeight, iHeight) * 0.95
+
+            var bgObj = document.createElement("div");  //创建背景层
+            bgObj.setAttribute("id","bgbox");
+            bgObj.style.width = iWidth+"px";
+            bgObj.style.height = Math.max(document.body.clientHeight, iHeight)+"px";
+            document.body.appendChild(bgObj);       //将创建的层插入body中
+
+            var oShow = document.getElementById('popup_div');
+            var oContent = document.getElementById('diary_content');
+            oShow.innerHTML = oContent.innerHTML;
+            oShow.style.left = (iWidth-divWidth)/2+"px";
+            oShow.style.top = (iHeight-divHeight)/2+"px";
+            oShow.style.width = '65%'
+            oShow.style.height = '95%'
+
+            function oClose(){
+                document.body.removeChild(bgObj);
+                $('#popup_div').fadeOut("1000");
+                oShow.innerHTML = "";
+            }
+
+            bgObj.onclick = oClose;
+            $('#popup_div').fadeIn("1000");
+        }
+    </script>
+</div>
+
+    <br/>
+</div>
